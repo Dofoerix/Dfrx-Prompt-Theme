@@ -24,7 +24,7 @@ Name of the folder with configuration files
 
 ### According to the segments
 
-`full`/`standard`/`light` in the name of the file
+`full`/`standard`/`light` in the name of the config file
 
 #### Full
 
