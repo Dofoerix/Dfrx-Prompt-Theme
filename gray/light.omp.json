@@ -12,12 +12,13 @@
           "type": "path",
           "style": "diamond",
           "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
           "foreground": "#111111",
           "background": "#f1f1f1",
           "properties": {
             "style": "folder"
           },
-          "template": " {{if eq .Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Path}}{{end}} <#f1f1f1,transparent>\ue0b4</>"
+          "template": " {{if eq .Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Path}}{{end}} "
         },
         {
           "type": "executiontime",
