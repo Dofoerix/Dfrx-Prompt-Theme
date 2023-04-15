@@ -37,10 +37,17 @@
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
+            "git_icon": "\uf7a1",
             "github_icon": "\uf7a3",
-            "branch_icon": "\ue725 "
+            "branch_icon": "\ue725 ",
+            "commit_icon": "\ue729 ",
+            "tag_icon": "\uf9fb ",
+            "rebase_icon": "\ue728 ",
+            "merge_icon": "\ue727 ",
+            "revert_icon": "\uf964 ",
+            "no_commits_icon": "\uf595 "
           },
-          "template": " {{if .UpstreamIcon}}{{.UpstreamIcon}} | {{else}}\uf7a1 | {{end}}{{.HEAD}} | {{if .BranchStatus}}{{.BranchStatus}}{{end}}{{if .Working.Changed}} | \uf044 {{.Working.String}}{{end}}{{if and .Working.Changed .Staging.Changed}}{{end}}{{if .Staging.Changed}} | \uf046 {{.Staging.String}}{{end}}{{if gt .StashCount 0}}| \uf692 {{.StashCount}}{{end}} "
+          "template": " {{if .UpstreamIcon}}{{.UpstreamIcon}} | {{else}}\uf7a1 | {{end}}{{.HEAD}} | {{if .BranchStatus}}{{.BranchStatus}}{{end}}{{if .Working.Changed}} | \uf044 {{.Working.String}}{{end}}{{if .Staging.Changed}} | \uf046 {{.Staging.String}}{{end}}{{if gt .StashCount 0}} | \uf692 {{.StashCount}}{{end}} "
         },
         {
           "type": "executiontime",
