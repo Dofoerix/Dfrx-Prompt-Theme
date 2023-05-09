@@ -39,12 +39,15 @@ Other WIP themes variants can be found on [other-themes](https://github.com/Dofo
 - Current user
 - Current folder 
 - Git (displayed in the git repo)
+- Language version (displayed in directory with Python file)[^1]
 - Execution time
 - Exit (broken heart if exit code ≠ 0)
 - Root (displayed if the current user is root)
 - Time
 
 </details>
+
+[^1]: At the moment this segment is only displayed with Python files
 
 #### Standard
 
