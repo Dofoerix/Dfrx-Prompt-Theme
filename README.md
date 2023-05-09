@@ -16,6 +16,10 @@ Name of the folder with configuration files
 
 ![green](./screenshots/green.png)
 
+#### Other
+
+Other WIP themes variants can be found on [other-themes](https://github.com/Dofoerix/Dfrx-Prompt-Theme/tree/other-themes) branch
+
 ### By segments
 
 `full`/`standard`/`light` in the name of the config file
@@ -23,6 +27,10 @@ Name of the folder with configuration files
 #### Full
 
 ![full](./screenshots/full.png)
+
+<details>
+
+<summary>Segments list</summary>
 
 - Current user
 - Current folder 
@@ -32,9 +40,15 @@ Name of the folder with configuration files
 - Root (displayed if the current user is root)
 - Time
 
+</details>
+
 #### Standard
 
 ![standard](./screenshots/standard.png)
+
+<details>
+
+<summary>Segments list</summary>
 
 - Current folder 
 - Git (displayed in the git repo)
@@ -43,15 +57,23 @@ Name of the folder with configuration files
 - Root (displayed if the current user is root)
 - Time (minutes and seconds if the prompt is transient)
 
+</details>
+
 #### Light
 
 ![light](./screenshots/light.png)
+
+<details>
+
+<summary>Segments list</summary>
 
 - Current folder
 - Execution time
 - Exit (broken heart if exit code ≠ 0)
 - Root (displayed if the current user is root)
 - Time (minutes and seconds if the prompt is transient)
+
+</details>
 
 ### By transient prompt
 
@@ -61,9 +83,13 @@ More info about transient prompt can be found [here](https://ohmyposh.dev/docs/c
 
 ## Usage
 
-1. Install Oh My Posh for your system ([Windows](https://ohmyposh.dev/docs/installation/windows), [macOS](https://ohmyposh.dev/docs/installation/macos), [Linux](https://ohmyposh.dev/docs/installation/macos))
-2. Clone this repository or download one of the configuration files to any folder
-3. Set the theme using [this](https://ohmyposh.dev/docs/installation/customize#config-syntax) guide
+1. Install [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/tag/v2.3.3) version 2.3.3 that you like and set it in your terminal
+
+2. Install Oh My Posh for your system ([Windows](https://ohmyposh.dev/docs/installation/windows), [macOS](https://ohmyposh.dev/docs/installation/macos), [Linux](https://ohmyposh.dev/docs/installation/macos))
+
+3. Clone this repository or download one of the configuration files to any folder
+
+4. Set the theme using [this](https://ohmyposh.dev/docs/installation/customize#config-syntax) guide
 
    Replace `~/jandedobbeleer.omp.json` in the command with a path to any variant of this theme (e.g. `~/any-folder/Dfrx-Prompt-Theme/gray/full_no_tr.omp.json`)
 
