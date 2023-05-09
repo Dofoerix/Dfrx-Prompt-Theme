@@ -12,13 +12,17 @@ Name of the folder with configuration files
 
 ![gray](./screenshots/gray.png)
 
+#### Light Green
+
+![light_green](./screenshots/light_green.png)
+
 #### Green
 
 ![green](./screenshots/green.png)
 
-#### Light Green
+#### Pink
 
-![light_green](./screenshots/light_green.png)
+![pink](./screenshots/pink.png)
 
 #### Other
 
