@@ -16,6 +16,10 @@ Name of the folder with configuration files
 
 ![green](./screenshots/green.png)
 
+#### Light Green
+
+![light_green](./screenshots/light_green.png)
+
 #### Other
 
 Other WIP themes variants can be found on [other-themes](https://github.com/Dofoerix/Dfrx-Prompt-Theme/tree/other-themes) branch
