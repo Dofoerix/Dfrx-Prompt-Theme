@@ -46,10 +46,17 @@
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true,
+            "git_icon": "\uf7a1",
             "github_icon": "\uf7a3",
-            "branch_icon": "\ue725 "
+            "branch_icon": "\ue725 ",
+            "commit_icon": "\ue729 ",
+            "tag_icon": "\uf9fb ",
+            "rebase_icon": "\ue728 ",
+            "merge_icon": "\ue727 ",
+            "revert_icon": "\uf964 ",
+            "no_commits_icon": "\uf595 "
           },
-          "template": " {{if .UpstreamIcon}}{{.UpstreamIcon}} | {{else}}\uf7a1 | {{end}}{{.HEAD}} | {{if .BranchStatus}}{{.BranchStatus}}{{end}}{{if .Working.Changed}} | \uf044 {{.Working.String}}{{end}}{{if and .Working.Changed .Staging.Changed}}{{end}}{{if .Staging.Changed}} | \uf046 {{.Staging.String}}{{end}}{{if gt .StashCount 0}}| \uf692 {{.StashCount}}{{end}} "
+          "template": " {{if .UpstreamIcon}}{{.UpstreamIcon}} | {{else}}\uf7a1 | {{end}}{{.HEAD}} | {{if .BranchStatus}}{{.BranchStatus}}{{end}}{{if .Working.Changed}} | \uf044 {{.Working.String}}{{end}}{{if .Staging.Changed}} | \uf046 {{.Staging.String}}{{end}}{{if gt .StashCount 0}} | \uf692 {{.StashCount}}{{end}} "
         },
         {
           "type": "python",
@@ -111,7 +118,7 @@
           "invert_powerline": true,
           "foreground": "#111111",
           "background": "#ea698b",   
-          "template": "{{if not (.Segments.Contains \"root\")}}<#d9ed92,transparent>\ue0b6</>{{end}} \uf64f {{.CurrentDate | date .Format}} "
+          "template": "{{if not (.Segments.Contains \"root\")}}<#ea698b,transparent>\ue0b6</>{{end}} \uf64f {{.CurrentDate | date .Format}} "
         }
       ]
     },
@@ -131,10 +138,10 @@
   ],
   "transient_prompt": {
     "foreground": "#111111",
-    "template": "<#f1f1f1, transparent>\ue0b6</><#111111,#f1f1f1> \uf64f {{.Segments.Time.CurrentDate | date .Segments.Time.Format}} </><#f1f1f1, transparent>\ue0b4</> <#bcbcbc, transparent>\ue0b6</><#111111,#bcbcbc> {{if eq .Segments.Path.Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Segments.Path.Path}}{{end}} </><#bcbcbc, transparent>\ue0b4</> <#f1f1f1, transparent>\ue0b6</><#111111,#f1f1f1> \uf608 {{.Segments.Executiontime.FormattedMs}} </>{{if gt .Code 0}}<#f1f1f1,#898989>\ue0b4</><#111111,#898989> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#898989,transparent>\ue0b4</>{{else}}<#f1f1f1,#bcbcbc>\ue0b4</><#111111,#bcbcbc> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#bcbcbc,transparent>\ue0b4</>{{end}} <#f1f1f1>\u2771</> "  
+    "template": "<#ea698b, transparent>\ue0b6</><#111111,#ea698b> \uf64f {{.Segments.Time.CurrentDate | date .Segments.Time.Format}} </><#ea698b, transparent>\ue0b4</> <#d55d92, transparent>\ue0b6</><#111111,#d55d92> {{if eq .Segments.Path.Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Segments.Path.Path}}{{end}} </><#d55d92, transparent>\ue0b4</> <#c05299, transparent>\ue0b6</><#111111,#c05299> \uf608 {{.Segments.Executiontime.FormattedMs}} </>{{if gt .Code 0}}<#c05299,#973aa8>\ue0b4</><#111111,#973aa8> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#973aa8,transparent>\ue0b4</>{{else}}<#c05299,#ac46a1>\ue0b4</><#111111,#ac46a1> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#ac46a1,transparent>\ue0b4</>{{end}} <#ea698b>\u2771</> "  
   },
   "secondary_prompt": {
-    "foreground": "#f1f1f1",
+    "foreground": "#ea698b",
     "template": "\u276f "
   }
 }

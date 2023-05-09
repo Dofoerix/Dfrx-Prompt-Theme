@@ -118,10 +118,6 @@
       ]
     }
   ],
-  "transient_prompt": {
-    "foreground": "#111111",
-    "template": "<#ea698b, transparent>\ue0b6</><#111111,#ea698b> \uf64f {{.Segments.Time.CurrentDate | date \"15:04:05\"}} </><#ea698b, transparent>\ue0b4</> <#d55d92, transparent>\ue0b6</><#111111,#d55d92> {{if eq .Segments.Path.Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Segments.Path.Path}}{{end}} </><#d55d92, transparent>\ue0b4</> <#ea698b, transparent>\ue0b6</><#111111,#ea698b> \uf608 {{.Segments.Executiontime.FormattedMs}} </>{{if gt .Code 0}}<#ea698b,#c05299>\ue0b4</><#111111,#c05299> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#c05299,transparent>\ue0b4</>{{else}}<#ea698b,#d55d92>\ue0b4</><#111111,#d55d92> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#d55d92,transparent>\ue0b4</>{{end}} <#ea698b>\u2771</> "  
-  },
   "secondary_prompt": {
     "foreground": "#ea698b",
     "template": "\u276f "
