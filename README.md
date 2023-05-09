@@ -16,6 +16,10 @@ Name of the folder with configuration files
 
 ![green](./screenshots/green.png)
 
+#### Other
+
+Other WIP themes variants can be found on [other-themes](https://github.com/Dofoerix/Dfrx-Prompt-Theme/tree/other-themes) branch
+
 ### By segments
 
 `full`/`standard`/`light` in the name of the config file
@@ -79,7 +83,7 @@ More info about transient prompt can be found [here](https://ohmyposh.dev/docs/c
 
 ## Usage
 
-1. Install [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/tag/v2.3.3) version 2.33 that you like and set it in your terminal
+1. Install [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/tag/v2.3.3) version 2.3.3 that you like and set it in your terminal
 
 2. Install Oh My Posh for your system ([Windows](https://ohmyposh.dev/docs/installation/windows), [macOS](https://ohmyposh.dev/docs/installation/macos), [Linux](https://ohmyposh.dev/docs/installation/macos))
 
