@@ -1,0 +1,100 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": true,
+  "version": 2,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "path",
+          "style": "diamond",
+          "leading_diamond": "\ue0b6",
+          "trailing_diamond": "\ue0b4",
+          "foreground": "#111111",
+          "background": "#ea698b",
+          "properties": {
+            "style": "folder"
+          },
+          "template": " {{if eq .Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Path}}{{end}} "
+        },
+        {
+          "type": "executiontime",
+          "style": "diamond",
+          "leading_diamond": " \ue0b6",
+          "foreground": "#111111",
+          "background": "#ea698b",
+          "properties": {
+            "always_enabled": true
+          },
+          "template": " \uf608 {{.FormattedMs}} "
+        },
+        {
+          "type": "exit",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b4",
+          "foreground": "#111111",
+          "background": "#d55d92",
+          "background_templates": [
+            "{{if gt .Code 0}}#c05299{{end}}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "template": " {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "alias": "root",
+          "type": "root",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b6",
+          "invert_powerline": true,
+          "foreground": "#111111",
+          "background": "#d55d92",
+          "template": " \uf085  "
+        },
+        {
+          "type": "time",
+          "style": "diamond",
+          "trailing_diamond": "\ue0b4",
+          "invert_powerline": true,
+          "foreground": "#111111",
+          "background": "#ea698b",   
+          "properties": {
+            "time_format": "04:05"
+          },
+          "template": "{{if not (.Segments.Contains \"root\")}}<#ea698b,transparent>\ue0b6</>{{end}} \uf64f {{.CurrentDate | date .Format}} "
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text", 
+          "style": "plain",
+          "foreground": "#ea698b",
+          "template": "\u2771"
+        }
+      ]
+    }
+  ],
+  "transient_prompt": {
+    "foreground": "#111111",
+    "template": "<#ea698b, transparent>\ue0b6</><#111111,#ea698b> \uf64f {{.Segments.Time.CurrentDate | date \"15:04:05\"}} </><#ea698b, transparent>\ue0b4</> <#d55d92, transparent>\ue0b6</><#111111,#d55d92> {{if eq .Segments.Path.Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Segments.Path.Path}}{{end}} </><#d55d92, transparent>\ue0b4</> <#ea698b, transparent>\ue0b6</><#111111,#ea698b> \uf608 {{.Segments.Executiontime.FormattedMs}} </>{{if gt .Code 0}}<#ea698b,#c05299>\ue0b4</><#111111,#c05299> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#c05299,transparent>\ue0b4</>{{else}}<#ea698b,#d55d92>\ue0b4</><#111111,#d55d92> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#d55d92,transparent>\ue0b4</>{{end}} <#ea698b>\u2771</> "  
+  },
+  "secondary_prompt": {
+    "foreground": "#ea698b",
+    "template": "\u276f "
+  }
+}
