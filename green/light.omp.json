@@ -18,7 +18,7 @@
           "properties": {
             "style": "folder"
           },
-          "template": " {{if eq .Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Path}}{{end}} "
+          "template": " {{if eq .Path \"~\"}}\udb80\ude4c {{.UserName}}{{else}}\udb80\ude4b {{.Path}}{{end}} "
         },
         {
           "type": "executiontime",
@@ -29,7 +29,7 @@
           "properties": {
             "always_enabled": true
           },
-          "template": " \uf608 {{.FormattedMs}} "
+          "template": " \udb80\udd09 {{.FormattedMs}} "
         },
         {
           "type": "exit",
@@ -43,7 +43,7 @@
           "properties": {
             "always_enabled": true
           },
-          "template": " {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} "
+          "template": " {{if gt .Code 0}}\udb80\uded4{{else}}\udb80\uded1{{end}} "
         }
       ]
     },
@@ -71,7 +71,7 @@
           "properties": {
             "time_format": "04:05"
           },
-          "template": "{{if not (.Segments.Contains \"root\")}}<#ccff33,transparent>\ue0b6</>{{end}} \uf64f {{.CurrentDate | date .Format}} "
+          "template": "{{if not (.Segments.Contains \"root\")}}<#ccff33,transparent>\ue0b6</>{{end}} \udb85\udc4e {{.CurrentDate | date .Format}} "
         }
       ]
     },
@@ -91,7 +91,7 @@
   ],
   "transient_prompt": {
     "foreground": "#111111",
-    "template": "<#ccff33, transparent>\ue0b6</><#111111,#ccff33> \uf64f {{.Segments.Time.CurrentDate | date \"15:04:05\"}} </><#ccff33, transparent>\ue0b4</> <#9ef01a, transparent>\ue0b6</><#111111,#9ef01a> {{if eq .Segments.Path.Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Segments.Path.Path}}{{end}} </><#9ef01a, transparent>\ue0b4</> <#ccff33, transparent>\ue0b6</><#111111,#ccff33> \uf608 {{.Segments.Executiontime.FormattedMs}} </>{{if gt .Code 0}}<#ccff33,#70e000>\ue0b4</><#111111,#70e000> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#70e000,transparent>\ue0b4</>{{else}}<#ccff33,#9ef01a>\ue0b4</><#111111,#9ef01a> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#9ef01a,transparent>\ue0b4</>{{end}} <#ccff33>\u2771</> "  
+    "template": "<#ccff33, transparent>\ue0b6</><#111111,#ccff33> \udb85\udc4e {{.Segments.Time.CurrentDate | date \"15:04:05\"}} </><#ccff33, transparent>\ue0b4</> <#9ef01a, transparent>\ue0b6</><#111111,#9ef01a> {{if eq .Segments.Path.Path \"~\"}}\udb80\ude4c {{.UserName}}{{else}}\udb80\ude4b {{.Segments.Path.Path}}{{end}} </><#9ef01a, transparent>\ue0b4</> <#ccff33, transparent>\ue0b6</><#111111,#ccff33> \udb80\udd09 {{.Segments.Executiontime.FormattedMs}} </>{{if gt .Code 0}}<#ccff33,#70e000>\ue0b4</><#111111,#70e000> {{if gt .Code 0}}\udb80\uded4{{else}}\udb80\uded1{{end}} </><#70e000,transparent>\ue0b4</>{{else}}<#ccff33,#9ef01a>\ue0b4</><#111111,#9ef01a> {{if gt .Code 0}}\udb80\uded4{{else}}\udb80\uded1{{end}} </><#9ef01a,transparent>\ue0b4</>{{end}} <#ccff33>\u2771</> "  
   },
   "secondary_prompt": {
     "foreground": "#ccff33",

@@ -2,6 +2,10 @@
 
 [Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh) theme created to make the prompt more beautiful and convenient
 
+## About this branch
+
+Light green and lighy gray variants was updated to work with new Nerd Font versions. Not in the main branch because I don't want to update every file.
+
 ## Variations
 
 ### By colors
