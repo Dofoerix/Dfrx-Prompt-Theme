@@ -7,9 +7,9 @@
   },
   "palette": {
     "text": "#111111",
-    "background-light": "#ccff33",
-    "background-dark": "#9ef01a",
-    "background-error": "#70e000"
+    "background-light": "#9ed916",
+    "background-dark": "#83b314",
+    "background-error": "#658c0f"
   },
   "blocks": [
     {
