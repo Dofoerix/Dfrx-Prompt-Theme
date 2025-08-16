@@ -1,16 +1,15 @@
 # Dofoerix' Prompt Theme
 
-[Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh) theme created to make the prompt more beautiful and convenient
-
-## About this branch
-
-Light green and lighy gray variants was updated to work with new Nerd Font versions. Not in the main branch because I don't want to update every file.
+[Oh My Posh](https://github.com/JanDeDobbeleer/oh-my-posh) theme created to make the prompt more beautiful and convenient.
 
 ## Variations
 
+> [!NOTE]
+> Certain symbols aren’t rendered properly in previews, but display as expected in use.
+
 ### By colors
 
-Name of the folder with configuration files
+Name of the folder with configuration files.
 
 #### Gray
 
@@ -30,11 +29,45 @@ Name of the folder with configuration files
 
 #### Other
 
-Other WIP themes variants can be found on [other-themes](https://github.com/Dofoerix/Dfrx-Prompt-Theme/tree/other-themes) branch
+Other theme variants can be found on [other-themes](https://github.com/Dofoerix/Dfrx-Prompt-Theme/tree/other-themes) branch (outdated).
 
 ### By segments
 
-`full`/`standard`/`light` in the name of the config file
+`light`/`standard`/`full` in the name of the config file (full and standard variants are [outdated](https://github.com/Dofoerix/Dfrx-Prompt-Theme/tree/outdated)).
+
+#### Light
+
+![light](./screenshots/gray.png)
+
+<details>
+
+<summary>Segments list</summary>
+
+- Current folder
+- Python virtual environment name (displayed if venv is activated)
+- Execution time
+- Exit (broken heart if exit code ≠ 0)
+- Root (displayed if the current user is root)
+- Time (minutes and seconds if the prompt is transient)
+
+</details>
+
+#### Standard
+
+![standard](./screenshots/standard.png)
+
+<details>
+
+<summary>Segments list</summary>
+
+- Current folder 
+- Git (displayed in the git repo)
+- Execution time
+- Exit (broken heart if exit code ≠ 0)
+- Root (displayed if the current user is root)
+- Time (minutes and seconds if the prompt is transient)
+
+</details>
 
 #### Full
 
@@ -57,48 +90,15 @@ Other WIP themes variants can be found on [other-themes](https://github.com/Dofo
 
 [^1]: At the moment this segment is only displayed with Python files
 
-#### Standard
-
-![standard](./screenshots/standard.png)
-
-<details>
-
-<summary>Segments list</summary>
-
-- Current folder 
-- Git (displayed in the git repo)
-- Execution time
-- Exit (broken heart if exit code ≠ 0)
-- Root (displayed if the current user is root)
-- Time (minutes and seconds if the prompt is transient)
-
-</details>
-
-#### Light
-
-![light](./screenshots/light.png)
-
-<details>
-
-<summary>Segments list</summary>
-
-- Current folder
-- Execution time
-- Exit (broken heart if exit code ≠ 0)
-- Root (displayed if the current user is root)
-- Time (minutes and seconds if the prompt is transient)
-
-</details>
-
 ### By transient prompt
 
-`no_tr` in the name of the config file means this feature is disabled in this variant
+`no_tr` in the name of the config file means this feature is disabled in this variant.
 
-More info about transient prompt can be found [here](https://ohmyposh.dev/docs/configuration/transient)
+More info about transient prompt can be found [here](https://ohmyposh.dev/docs/configuration/transient).
 
 ## Usage
 
-1. Install [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/tag/v2.3.3) version 2.3.3 that you like and set it in your terminal
+1. Install [Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/latest) that you like and set it in your terminal
 
 2. Install Oh My Posh for your system ([Windows](https://ohmyposh.dev/docs/installation/windows), [macOS](https://ohmyposh.dev/docs/installation/macos), [Linux](https://ohmyposh.dev/docs/installation/macos))
 

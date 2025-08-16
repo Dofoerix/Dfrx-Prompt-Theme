@@ -1,100 +1,116 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "final_space": true,
-  "version": 2,
+  "secondary_prompt": {
+    "template": "❯ ",
+    "foreground": "p:background-light",
+    "background": "transparent"
+  },
+  "transient_prompt": {
+    "template": "<p:background-light, transparent></><p:text,p:background-light> 󱑎 {{.Segments.Time.CurrentDate | date \"15:04:05\"}} </><p:background-light, transparent></> <p:background-dark, transparent></><p:text,p:background-dark> {{if eq .Segments.Path.Path \"󰉌\"}}󰉌 {{.UserName}}{{else}}{{.Segments.Path.Path}}{{end}} </><p:background-dark, transparent></> <p:background-light, transparent></><p:text,p:background-light> 󰄉 {{.Segments.Executiontime.FormattedMs}} </>{{if .Segments.Status.Error}}<p:background-light,p:background-error></><p:text,p:background-error> {{if .Segments.Status.Error}}󰋔{{else}}󰋑{{end}} </><p:background-error,transparent></>{{else}}<p:background-light,p:background-dark></><p:text,p:background-dark> {{if .Segments.Status.Error}}󰋔{{else}}󰋑{{end}} </><p:background-dark,transparent></>{{end}} <p:background-light>❱</> ",
+    "foreground": "p:text"
+  },
+  "palette": {
+    "text": "#111111",
+    "background-light": "#d9ed92",
+    "background-dark": "#b5e48c",
+    "background-error": "#99d98c"
+  },
   "blocks": [
     {
       "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
+          "properties": {
+            "style": "agnoster",
+            "home_icon": "󰉌",
+            "folder_icon": "󰉋",
+            "folder_separator_template": " {{if eq .OS \"windows\"}}\\{{else}}/{{end}} "
+          },
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": " {{if eq .Path \"󰉌\"}}󰉌 {{.UserName}}{{else}}{{.Path}}{{end}} ",
+          "foreground": "p:text",
+          "background": "p:background-light",
           "type": "path",
-          "style": "diamond",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "#111111",
-          "background": "#d9ed92",
-          "properties": {
-            "style": "folder"
-          },
-          "template": " {{if eq .Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Path}}{{end}} "
+          "style": "diamond"
         },
         {
+          "trailing_diamond": "",
+          "template": "  {{if .Error}}{{.Error}}{{else}}{{if .Venv}}{{.Venv}}{{end}}{{end}} ",
+          "foreground": "p:text",
+          "background": "p:background-dark",
+          "type": "python",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "leading_diamond": " ",
+          "template": " 󰄉 {{.FormattedMs}} ",
+          "foreground": "p:text",
+          "background": "p:background-light",
           "type": "executiontime",
-          "style": "diamond",
-          "leading_diamond": " \ue0b6",
-          "foreground": "#111111",
-          "background": "#d9ed92",
-          "properties": {
-            "always_enabled": true
-          },
-          "template": " \uf608 {{.FormattedMs}} "
+          "style": "diamond"
         },
         {
-          "type": "exit",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
-          "foreground": "#111111",
-          "background": "#b5e48c",
-          "background_templates": [
-            "{{if gt .Code 0}}#99d98c{{end}}"
-          ],
           "properties": {
             "always_enabled": true
           },
-          "template": " {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} "
+          "template": " {{if .Error}}󰋔{{else}}󰋑{{end}} ",
+          "foreground": "p:text",
+          "powerline_symbol": "",
+          "background": "p:background-dark",
+          "type": "status",
+          "style": "powerline",
+          "background_templates": [
+            "{{if .Error}}p:background-error{{end}}"
+          ]
         }
-      ]
+      ],
+      "newline": true
     },
     {
       "type": "prompt",
       "alignment": "right",
       "segments": [
         {
-          "alias": "root",
+          "template": "   ",
+          "foreground": "p:text",
+          "leading_diamond": "",
+          "background": "p:background-dark",
           "type": "root",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b6",
-          "invert_powerline": true,
-          "foreground": "#111111",
-          "background": "#b5e48c",
-          "template": " \uf085  "
+          "style": "diamond"
         },
         {
-          "type": "time",
-          "style": "diamond",
-          "trailing_diamond": "\ue0b4",
-          "invert_powerline": true,
-          "foreground": "#111111",
-          "background": "#d9ed92",   
           "properties": {
             "time_format": "04:05"
           },
-          "template": "{{if not (.Segments.Contains \"root\")}}<#d9ed92,transparent>\ue0b6</>{{end}} \uf64f {{.CurrentDate | date .Format}} "
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": " 󱑎 {{.CurrentDate | date .Format}} ",
+          "foreground": "p:text",
+          "background": "p:background-light",
+          "type": "time",
+          "style": "diamond"
         }
       ]
     },
     {
       "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "type": "text", 
-          "style": "plain",
-          "foreground": "#d9ed92",
-          "template": "\u2771"
+          "template": "❱",
+          "foreground": "p:background-light",
+          "type": "text",
+          "style": "plain"
         }
-      ]
+      ],
+      "newline": true
     }
   ],
-  "transient_prompt": {
-    "foreground": "#111111",
-    "template": "<#d9ed92, transparent>\ue0b6</><#111111,#d9ed92> \uf64f {{.Segments.Time.CurrentDate | date \"15:04:05\"}} </><#d9ed92, transparent>\ue0b4</> <#b5e48c, transparent>\ue0b6</><#111111,#b5e48c> {{if eq .Segments.Path.Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Segments.Path.Path}}{{end}} </><#b5e48c, transparent>\ue0b4</> <#d9ed92, transparent>\ue0b6</><#111111,#d9ed92> \uf608 {{.Segments.Executiontime.FormattedMs}} </>{{if gt .Code 0}}<#d9ed92,#99d98c>\ue0b4</><#111111,#99d98c> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#99d98c,transparent>\ue0b4</>{{else}}<#d9ed92,#b5e48c>\ue0b4</><#111111,#b5e48c> {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} </><#b5e48c,transparent>\ue0b4</>{{end}} <#d9ed92>\u2771</> "  
-  },
-  "secondary_prompt": {
-    "foreground": "#d9ed92",
-    "template": "\u276f "
-  }
+  "version": 3,
+  "final_space": true
 }

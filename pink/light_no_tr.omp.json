@@ -1,96 +1,112 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "final_space": true,
-  "version": 2,
+  "secondary_prompt": {
+    "template": "❯ ",
+    "foreground": "p:background-light",
+    "background": "transparent"
+  },
+  "palette": {
+    "text": "#111111",
+    "background-light": "#ea698b",
+    "background-dark": "#d55d92",
+    "background-error": "#c05299"
+  },
   "blocks": [
     {
       "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
+          "properties": {
+            "style": "agnoster",
+            "home_icon": "󰉌",
+            "folder_icon": "󰉋",
+            "folder_separator_template": " {{if eq .OS \"windows\"}}\\{{else}}/{{end}} "
+          },
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": " {{if eq .Path \"󰉌\"}}󰉌 {{.UserName}}{{else}}{{.Path}}{{end}} ",
+          "foreground": "p:text",
+          "background": "p:background-light",
           "type": "path",
-          "style": "diamond",
-          "leading_diamond": "\ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "foreground": "#111111",
-          "background": "#ea698b",
-          "properties": {
-            "style": "folder"
-          },
-          "template": " {{if eq .Path \"~\"}}\uf74b {{.UserName}}{{else}}\uf74a {{.Path}}{{end}} "
+          "style": "diamond"
         },
         {
+          "trailing_diamond": "",
+          "template": "  {{if .Error}}{{.Error}}{{else}}{{if .Venv}}{{.Venv}}{{end}}{{end}} ",
+          "foreground": "p:text",
+          "background": "p:background-dark",
+          "type": "python",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "always_enabled": true
+          },
+          "leading_diamond": " ",
+          "template": " 󰄉 {{.FormattedMs}} ",
+          "foreground": "p:text",
+          "background": "p:background-light",
           "type": "executiontime",
-          "style": "diamond",
-          "leading_diamond": " \ue0b6",
-          "foreground": "#111111",
-          "background": "#ea698b",
-          "properties": {
-            "always_enabled": true
-          },
-          "template": " \uf608 {{.FormattedMs}} "
+          "style": "diamond"
         },
         {
-          "type": "exit",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b4",
-          "foreground": "#111111",
-          "background": "#d55d92",
-          "background_templates": [
-            "{{if gt .Code 0}}#c05299{{end}}"
-          ],
           "properties": {
             "always_enabled": true
           },
-          "template": " {{if gt .Code 0}}\uf7d3{{else}}\uf7d0{{end}} "
+          "template": " {{if .Error}}󰋔{{else}}󰋑{{end}} ",
+          "foreground": "p:text",
+          "powerline_symbol": "",
+          "background": "p:background-dark",
+          "type": "status",
+          "style": "powerline",
+          "background_templates": [
+            "{{if .Error}}p:background-error{{end}}"
+          ]
         }
-      ]
+      ],
+      "newline": true
     },
     {
       "type": "prompt",
       "alignment": "right",
       "segments": [
         {
-          "alias": "root",
+          "template": "   ",
+          "foreground": "p:text",
+          "leading_diamond": "",
+          "background": "p:background-dark",
           "type": "root",
-          "style": "powerline",
-          "powerline_symbol": "\ue0b6",
-          "invert_powerline": true,
-          "foreground": "#111111",
-          "background": "#d55d92",
-          "template": " \uf085  "
+          "style": "diamond"
         },
         {
-          "type": "time",
-          "style": "diamond",
-          "trailing_diamond": "\ue0b4",
-          "invert_powerline": true,
-          "foreground": "#111111",
-          "background": "#ea698b",   
           "properties": {
             "time_format": "04:05"
           },
-          "template": "{{if not (.Segments.Contains \"root\")}}<#ea698b,transparent>\ue0b6</>{{end}} \uf64f {{.CurrentDate | date .Format}} "
+          "leading_diamond": "",
+          "trailing_diamond": "",
+          "template": " 󱑎 {{.CurrentDate | date .Format}} ",
+          "foreground": "p:text",
+          "background": "p:background-light",
+          "type": "time",
+          "style": "diamond"
         }
       ]
     },
     {
       "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
-          "type": "text", 
-          "style": "plain",
-          "foreground": "#ea698b",
-          "template": "\u2771"
+          "template": "❱",
+          "foreground": "p:background-light",
+          "type": "text",
+          "style": "plain"
         }
-      ]
+      ],
+      "newline": true
     }
   ],
-  "secondary_prompt": {
-    "foreground": "#ea698b",
-    "template": "\u276f "
-  }
+  "version": 3,
+  "final_space": true
 }
